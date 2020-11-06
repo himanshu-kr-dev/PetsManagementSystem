@@ -1,0 +1,187 @@
+<html>
+    <head>
+        <title>
+            Pet Shop
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <script>
+            var error = "";
+            var errorcode=0;
+
+            function emailCheck(){
+                var email = document.getElementById("email").value;
+                var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+                if(email.length===0){
+                    error+='\nEmail id not provided';
+                    errorcode++;
+                }
+
+                if (reg.test(email) === false && email.length>0)
+                {
+                    error+='\nInvalid Email Address';
+                    errorcode++;
+                }
+            }
+
+            function contactName(){
+                    var fname = document.getElementById("fname").value;
+                    var lname = document.getElementById("lname").value;
+                    if(fname===lname && fname.length>0 && lname.length>0){
+                        error+='\nFirst name and last name same';
+                        errorcode++;
+                    }
+                    if(fname.length===0){
+                        error+='\nNo first name given';
+                        errorcode++;
+                    }
+                    if(lname.length===0){
+                        error+='\nNo Last name given';
+                        errorcode++;
+                    }
+            }
+
+            function checkMessage(){
+                var message = document.getElementById("message").value;
+                if(message.length===0){
+                    error+='\nMessage body is empty';
+                    errorcode++;
+                }
+
+                if(message.length>=501){
+                    error+='\nMessage is too long';
+                    errorcode++;
+                }
+            }
+            function validate(){
+                emailCheck();
+                contactName();
+                checkMessage();
+                if(errorcode>0){
+                    alert(error);
+                }
+                else{
+                    alert("Submitted Successfully");
+                }
+            }
+        </script>
+        <style>
+            .screen{
+                width: 100%;
+                height: 600px;
+                padding : 40px;
+                position: absolute;
+            }
+            .iconsq{
+              height: 32px;
+              width: 32px;
+              background-color: white;
+              padding: 8px;
+              border-radius: 17px;
+              color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="home">
+                <img src="img/ic_add_pet.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Pets Shop
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" href="#" style="background-color: black;">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="dogs.html">Dogs</a>
+                <a class="nav-link" href="birds.html">Birds</a>
+                <a class="nav-link" href="#">Rabbits</a>
+              </div>
+              <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="contact.html" ><button class="btn btn-outline-success">Contact Us</button></a>
+                <a class="nav-link" href="home.html" ><button class="btn btn-outline-warning">Home</button></a>
+              </div>
+            </div>
+          </nav>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <center><h1><span class="badge badge-dark">Contact Us</span></h1></center>
+          <br>
+          <br>
+          
+          <form style="margin-left:10px; margin-right: 10px;border: 3px solid black; padding: 40px; border-radius: 20px; background-color: rgba(128, 128, 128, 0.479);">
+            <div class="row">
+               <div class="col">
+                  <label for="name">First Name</label>
+                 <input type="text" class="form-control" id="fname" placeholder="John">
+               </div>
+               <div class="col">
+                  <label for="name">Last Name</label>
+                 <input type="text" class="form-control" id="lname" placeholder="Doe">
+               </div>
+             </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Email address</label>
+              <input id="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Your Message</label>
+              <textarea id="message" class="form-control" style="height:75px;""id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <center><button type="submit" class="btn btn-outline-dark btn-lg mb-2" onclick="validate()">Submit</button></center>
+          </form>
+          <!-- Footer -->
+<footer class="page-footer font-small bg-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <div class="iconsq" style="background-color: rgb(24, 24, 131);"><i class="fab fa-facebook-f" > </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <div class="iconsq" style="background-color: rgb(2, 83, 204);"><i class="fab fa-twitter"> </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <div class="iconsq" style="background-color: rgb(221, 10, 10);"><i class="fab fa-google-plus-g"> </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <div class="iconsq" style="background-color: rgb(6, 65, 228);"><i class="fab fa-linkedin-in"> </i></div>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color: white;">© 2020 Copyright:
+      <a href="home.html" style="text-decoration: white; color: tomato;">OnilnePetShop</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+          
+    </body>
+</html>
