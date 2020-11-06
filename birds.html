@@ -1,144 +1,151 @@
-<!doctype html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
         <title>
-            Petshop->Birds
+            Pet Shop - > Birds
         </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
         <style>
-            body{
-                margin: 0px;
-                background-image: url("birds-background.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
+            .screen{
+                width: 100%;
+                height: 600px;
+                padding : 40px;
+                position: absolute;
             }
-            .topnav{
-                width: 99.5%;
-                height: 60px;
-                background-color: rgb(0, 0, 0);
-                position:fixed;
-                border: 3px beige solid;
-                border-radius: 5px;
+            .iconsq{
+              height: 32px;
+              width: 32px;
+              background-color: white;
+              padding: 8px;
+              border-radius: 17px;
+              color: white;
             }
-            .topnav a{
-                float: left;
-                margin-left: 15px;
-                padding-top: 8px;
-                font-size: 30px;
-                color: rgb(255, 255, 255); 
-                text-decoration: none; 
-                font-weight: bold;
-                font-family:'Poppins', sans-serif;
-                
-            }
-            .cards{
-                width:600px;
-                height:700px;
-                border-radius:5px;
-                background-color:white;
-                margin-top:30px;
-                box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.253);
-                transition: 0.3s;
-            }
-            .cards:hover{
-                box-shadow:0 20px 25px 0 rgba(0, 0, 0, 0.945);
-            }
-            .cards img{
-                width: 598px; 
-                height: 298px;
-                border-radius: 5px;
-                border:black solid 2px;
-
-            }
-            .cards p{
-                font-size: 25px;
-                padding-left:10px;
-                padding-right:10px;
-                float: left;
-                text-align:justify;
-                text-justify:inter-word;
-            }
-            .cards h1{
-                width: 600px;
-                height: 20px;
-            }
-            button{
-                width: 300px;
-                height: 50px;
-                font-size: 30px;
-                background-color: blue;
-                color: white;
-                border:grey 2px solid;
-                border-radius: 10px;
-                display: inline-block;
-                cursor: pointer;
-                transition:0.3s;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            }
-            button :hover{
-                box-shadow:0 20px 25px 0 rgba(0, 0, 0, 0.945);
-            }
-            span{
-                color: chartreuse;
-            }
-        
         </style>
     </head>
     <body>
-        <div class="topnav">
-            <a href="home.html" style="margin-left: 10px;"><img src="ic_add_pet.png"></a>
-            <a href="#" style="margin-left: 15px;"><span>B</span>IRDS</a>
-            <a href="home.html" style="float: right; margin-right: 15px;"><span>H</span>OME</a>
-        </div>
-        <center>
-        <br><br><br><br><br><br>
-        <div class="cards">
-            <img src="grey.jpg">
-            <h1><b>Grey Headed Lovebird</b></h1>
-            <p>The grey-headed lovebird or Madagascar lovebird is a small species of parrot of the lovebird genus. It is a mainly green parrot. The species is sexually dimorphic and only the adult male has grey on its upper body.</p>
-            <br><br><br><br><br><br><br><br><br><br><br><br>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <div class="cards">
-            <img src="lizard.jpg">
-            <h1><b>Lizard Canary</b></h1>
-            <p>The Lizard canary is a living antique, with a history that spans over three centuries.  It is a creation of the Georgian period, and is bred for the pattern of its plumage: a design comprising intricate dark markings set against a rich gold or silver background.</p>
-            <button>Buy Now</button>
-        </div>  
-        <br>
-        <br> 
-        <div class="cards">
-            <img src="AfricanGrayParrot.jpg">
-            <h1><b>African Gray Parrot</b></h1>
-            <p>The African Grey is believed to have originated in the West and Central African rainforests. It is widely considered as among the smartest birds in the world, earning them the title as the “thinking man’s” bird. That’s why owners like to give them names such as Freud or Einstein. </p>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <div class="cards">
-            <img src="AmazonParrots.jpg">
-            <h1><b>Amazon Parrots</b></h1>
-            <p>The Amazon parrots originated around the areas of South America, Mexico, and the Caribbean. They are noted for their ability to imitate the human speech and various other sounds, making them good pets and companions.</p>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <div class="cards">
-            <img src="5-Bird-Black-Throated-Sparrow1.jpg">
-            <h1><b>Black Throated Sparrow</b></h1>
-            <p>Black-throated Sparrows are small birds often living in the southwestern US and Mexico. They are about 4.5 to 5.5 inches tall with a black and white head and a pale grey colour for their upper body. They sing a tinkling, bell-like song. These sparrow species like to feed on seeds and insects and prefer to travel in small groups.</p>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-    
-        </center>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="ic_add_pet.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                BIRDS -> 
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" href="#" style="background-color: black;">Breeds<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="birdproducts.html">Products</a>
+                <a class="nav-link" href="birdhealth.html">Healthcare Tips</a>
+              </div>
+              <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="contact.html" ><button class="btn btn-outline-success">Contact Us</button></a>
+                <a class="nav-link" href="home.html" ><button class="btn btn-outline-warning">Home</button></a>
+              </div>
+            </div>
+          </nav>
+          <br>
+          <br>
+          <br>
+          <br>
+          
+
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <center><h1 class="display-4">Birdies !!</h1></center>
+            </div>
+          </div>
+        <div class="card-deck" style="padding: 20px;">
+            <div class="card">
+              <a href="#"><img src="grey.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Grey Headed Lovebird</h5>
+                <p class="card-text">The grey-headed lovebird or Madagascar lovebird is a small species of parrot of the lovebird genus. It is a mainly green parrot. The species is sexually dimorphic and only the adult male has grey on its upper body.</p>
+                <center><a href="checkout.html" class="btn btn-primary">Buy Now</a></center>
+              </div>
+            </div>
+            <div class="card">
+                <a href="#"><img src="lizard.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">Lizard Canary</h5>
+                  <p class="card-text">The Lizard canary is a living antique, with a history that spans over three centuries. It is a creation of the Georgian period, and is bred for the pattern of its plumage: a design comprising intricate dark markings set against a rich gold or silver background.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#"><img src="AfricanGrayParrot.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">African Gray Parrot</h5>
+                  <p class="card-text">The African Grey is believed to have originated in the West and Central African rainforests. It is widely considered as among the smartest birds in the world, earning them the title as the “thinking man’s” bird. That’s why owners like to give them names such as Freud or Einstein.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+            
+          </div>
+          <div class="card-deck" style="padding: 20px;">
+            <div class="card">
+                <a href="#"><img src="AmazonParrots.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">Amazon Parrots</h5>
+                  <p class="card-text">The Amazon parrots originated around the areas of South America, Mexico, and the Caribbean. They are noted for their ability to imitate the human speech and various other sounds, making them good pets and companions.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#"><img src="5-Bird-Black-Throated-Sparrow1.jpg" style="height: 297px;;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">Black Throated Sparrow</h5>
+                  <p class="card-text">Black-throated Sparrows are small birds often living in the southwestern US and Mexico. They are about 4.5 to 5.5 inches tall with a black and white head and a pale grey colour for their upper body. They sing a tinkling, bell-like song. These sparrow species like to feed on seeds and insects and prefer to travel in small groups.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+            
+          </div>
+          <!-- Footer -->
+<footer class="page-footer font-small bg-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <div class="iconsq" style="background-color: rgb(24, 24, 131);"><i class="fab fa-facebook-f" > </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <div class="iconsq" style="background-color: rgb(2, 83, 204);"><i class="fab fa-twitter"> </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <div class="iconsq" style="background-color: rgb(221, 10, 10);"><i class="fab fa-google-plus-g"> </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <div class="iconsq" style="background-color: rgb(6, 65, 228);"><i class="fab fa-linkedin-in"> </i></div>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color: white;">© 2020 Copyright:
+      <a href="home.html" style="text-decoration: white; color: tomato;">OnilnePetShop</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+          
     </body>
-   
 </html>
