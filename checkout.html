@@ -28,7 +28,7 @@
     </head>
     <body>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="home.html">
                 <img src="img/ic_add_pet.png" width="30" height="30" class="d-inline-block align-top" alt="">
                 Pets Shop
               </a>
@@ -53,7 +53,7 @@
           <br>
           <br>
           <br>
-          <center><h1><span class="badge badge-dark">Billing</span></h1></center>
+          <center><h1><span class="badge badge-dark">Check Out</span></h1></center>
           <br>
           <br>
           
@@ -72,9 +72,158 @@
               <label for="exampleFormControlInput1">Email address</label>
               <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
-            
-            <center><button type="submit" class="btn btn-outline-dark btn-lg mb-2">Pay</button></center>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom03">City</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                <div class="invalid-feedback">
+                  Please provide a valid city.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom04">State</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                <div class="invalid-feedback">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom05">Zip</label>
+                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="dogbreed">Dog Breed</label>
+                  <select class="form-control" id="dogbreed">
+                    <option selected>Choose...</option>
+                    <option>Golden Retriever</option>
+                    <option>German Shepherd</option>
+                    <option>Bulldog</option>
+                    <option>Shiba Inu</option>
+                    <option>Samoyed</option>
+                  </select>
+                </div>
+                
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="birdbreed">Bird Breed</label>
+                  <select class="form-control" id="birdbreed">
+                    <option selected>Choose...</option>
+                    <option>Grey Headed Lovebird</option>
+                    <option>Lizard Canary</option>
+                    <option>African Gray Parrot</option>
+                    <option>Amazon Parrots</option>
+                    <option>Black Throated Sparrow</option>
+                  </select>
+                </div>
+                
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="rabbitbreed">Rabbit Breed</label>
+                  <select class="form-control" id="rabbitbreed">
+                    <option selected>Choose...</option>
+                    <option>Holland Lop</option>
+                    <option>American Rabbit</option>
+                    <option>Belgian Hare Rabbit</option>
+                    <option>Blanc de Hotot</option>
+                    <option>Californian Rabbits</option>
+                    <option>Netherland Dwarf Rabbit</option>
+                  </select>
+                </div>
+                
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">Dog Camera</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">Dog Bowl</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">Dog Brush</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">
+                    Bird Hanger
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">Skateboard</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">Bell Ball</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">Paw Protection</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">Bedding</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck1">
+                  <label class="form-check-label" for="gridCheck1">Fun Balls</label>
+                </div>
+              </div>
+              </div>
+              <br>
+              <center>
+              <div class="form-group">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+            <button type="submit" class="btn btn-outline-dark btn-lg mb-2" onclick="order()">Order Now</button></center>
           </form>
+          <script>
+            function order(){
+              alert("We'll reach out to you shortly :)");
+            }
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function() {
+              'use strict';
+              window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                  form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                  }, false);
+                });
+              }, false);
+            })();
+            </script>
           <!-- Footer -->
 <footer class="page-footer font-small bg-dark pt-4">
 
