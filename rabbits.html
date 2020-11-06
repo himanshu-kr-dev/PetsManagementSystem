@@ -1,148 +1,158 @@
-<!doctype html>
 <html>
     <head>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
         <title>
-            Petshop->Rabbits
+            Pet Shop - > Rabbits
         </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
         <style>
-            body{
-                margin: 0px;
-                background-image: url("rabbit-background.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-attachment: fixed;
+            .screen{
+                width: 100%;
+                height: 600px;
+                padding : 40px;
+                position: absolute;
             }
-            .topnav{
-                width: 99.5%;
-                height: 60px;
-                background-color: rgb(0, 0, 0);
-                position:fixed;
-                border: 3px beige solid;
-                border-radius: 5px;
+            .iconsq{
+              height: 32px;
+              width: 32px;
+              background-color: white;
+              padding: 8px;
+              border-radius: 17px;
+              color: white;
             }
-            .topnav a{
-                float: left;
-                margin-left: 15px;
-                padding-top: 8px;
-                font-size: 30px;
-                color: rgb(255, 255, 255); 
-                text-decoration: none; 
-                font-weight: bold;
-                font-family:'Poppins', sans-serif;
-                
-            }
-            .cards{
-                width:600px;
-                height:700px;
-                border-radius:5px;
-                background-color:white;
-                margin-top:30px;
-                box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.253);
-                transition: 0.3s;
-            }
-            .cards:hover{
-                box-shadow:0 20px 25px 0 rgba(0, 0, 0, 0.945);
-            }
-            .cards img{
-                width: 598px; 
-                height: 298px;
-                border-radius: 5px;
-                border:black solid 2px;
-
-            }
-            .cards p{
-                font-size: 25px;
-                padding-left:10px;
-                padding-right:10px;
-                float: left;
-                text-align:justify;
-                text-justify:inter-word;
-            }
-            .cards h1{
-                width: 600px;
-                height: 20px;
-            }
-            button{
-                width: 300px;
-                height: 50px;
-                font-size: 30px;
-                background-color: blue;
-                color: white;
-                border:grey 2px solid;
-                border-radius: 10px;
-                display: inline-block;
-                cursor: pointer;
-                transition:0.3s;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            }
-            button :hover{
-                box-shadow:0 20px 25px 0 rgba(0, 0, 0, 0.945);
-            }
-            span{
-                color: chartreuse;
-            }
-        
         </style>
     </head>
     <body>
-        <div class="topnav">
-            <a href="home.html" style="margin-left: 10px;"><img src="ic_add_pet.png"></a>
-            <a href="#" style="margin-left: 15px;"><span>R</span>ABBITS</a>
-            <a href="home.html" style="float: right; margin-right: 15px;"><span>H</span>OME</a>
-        </div>
-        <center>
-        <br><br><br><br><br><br>
-        <div class="cards" style="height: 750px;">
-            <img src="hollandlop.jpg">
-            <h1><b>Holland Lop</b></h1>
-            <p>Holland Lop rabbits are a small breed that have a short, stocky and almost boxy body type, somewhat resembling that of a Bulldog. They have short, lopped ears and a pronounced tuft of fur on top of their heads. The average weight of this breed is typically plus or minus that of 3.5lbs. They are available in a wide variety of colors. Due to their size and personalities, Holland Lops are very popular as show and pet rabbits. </p>
-            <br><br><br><br><br><br><br>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <div class="cards" style="height: 750px;">
-            <img src="hollandlop.jpg">
-            <h1><b>Holland Lop</b></h1>
-            <p>Holland Lop rabbits are a small breed that have a short, stocky and almost boxy body type, somewhat resembling that of a Bulldog. They have short, lopped ears and a pronounced tuft of fur on top of their heads. The average weight of this breed is typically plus or minus that of 3.5lbs. They are available in a wide variety of colors. Due to their size and personalities, Holland Lops are very popular as show and pet rabbits. </p>
-            <br><br><br><br><br><br><br>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <div class="cards" style="height: 750px;">
-            <img src="hollandlop.jpg">
-            <h1><b>Holland Lop</b></h1>
-            <p>Holland Lop rabbits are a small breed that have a short, stocky and almost boxy body type, somewhat resembling that of a Bulldog. They have short, lopped ears and a pronounced tuft of fur on top of their heads. The average weight of this breed is typically plus or minus that of 3.5lbs. They are available in a wide variety of colors. Due to their size and personalities, Holland Lops are very popular as show and pet rabbits. </p>
-            <br><br><br><br><br><br><br>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <div class="cards" style="height: 750px;">
-            <img src="hollandlop.jpg">
-            <h1><b>Holland Lop</b></h1>
-            <p>Holland Lop rabbits are a small breed that have a short, stocky and almost boxy body type, somewhat resembling that of a Bulldog. They have short, lopped ears and a pronounced tuft of fur on top of their heads. The average weight of this breed is typically plus or minus that of 3.5lbs. They are available in a wide variety of colors. Due to their size and personalities, Holland Lops are very popular as show and pet rabbits. </p>
-            <br><br><br><br><br><br><br>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <div class="cards" style="height: 750px;">
-            <img src="hollandlop.jpg">
-            <h1><b>Holland Lop</b></h1>
-            <p>Holland Lop rabbits are a small breed that have a short, stocky and almost boxy body type, somewhat resembling that of a Bulldog. They have short, lopped ears and a pronounced tuft of fur on top of their heads. The average weight of this breed is typically plus or minus that of 3.5lbs. They are available in a wide variety of colors. Due to their size and personalities, Holland Lops are very popular as show and pet rabbits. </p>
-            <br><br><br><br><br><br><br>
-            <button>Buy Now</button>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-    
-        </center>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="ic_add_pet.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                Rabbits -> 
+              </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link active" href="#" style="background-color: black;">Breeds<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="rabbitproducts.html">Products</a>
+                <a class="nav-link" href="rabbithealth.html">Healthcare Tips</a>
+              </div>
+              <div class="navbar-nav ml-auto">
+                <a class="nav-link" href="contact.html" ><button class="btn btn-outline-success">Contact Us</button></a>
+                <a class="nav-link" href="home.html" ><button class="btn btn-outline-warning">Home</button></a>
+              </div>
+            </div>
+          </nav>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <center><h1 class="display-4">Rabbits !!</h1></center>
+            </div>
+          </div>
+
+
+        <div class="card-deck" style="padding: 20px;">
+            <div class="card">
+              <a href="#"><img src="hollandlop.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+              <div class="card-body">
+                <h5 class="card-title">Holland Lop</h5>
+                <p class="card-text">Holland Lop rabbits are a small breed that have a short, stocky and almost boxy body type, somewhat resembling that of a Bulldog. They have short, lopped ears and a pronounced tuft of fur on top of their heads. The average weight of this breed is typically plus or minus that of 3.5lbs. They are available in a wide variety of colors. Due to their size and personalities, Holland Lops are very popular as show and pet rabbits.</p>
+                <center><a href="" class="btn btn-primary">Buy Now</a></center>
+              </div>
+            </div>
+            <div class="card">
+                <a href="#"><img src="hollandlop.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">American Rabbit</h5>
+                  <p class="card-text">The rare breed is a great choice for first-time owners because of its calm, sweet nature. Young children, however, are not recommended to care for them since they are shy and may bite if not handled gently. With a great grooming routine and healthy diet, the American rabbit can live up to 12 years.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#"><img src="bulldog.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">Belgian Hare Rabbit</h5>
+                  <p class="card-text">Tracing its roots back to the 18th century, the Belgian Hare is one of the oldest breeds. It thrives best outdoors with ample space and hay. It's considered high maintenance, mostly due to its nervous personality — known to easily spook if people don't properly announce themselves before approaching it.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+            
+          </div>
+          <div class="card-deck" style="padding: 20px;">
+            <div class="card">
+                <a href="#"><img src="shiba.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">Blanc de Hotot</h5>
+                  <p class="card-text">Originating from France, the Blanc de Hotot can easily be spotted by its "black eyeliner" that contrasts the rest of its white body. As a bonus, these bunnies do well with children and other pets as long as they grow up with them. Dedicated brushing time and taking walks outside are amazing ways to bond with them.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#"><img src="Samoyed.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">Californian Rabbits</h5>
+                  <p class="card-text">A cross between a Himalayan and a Chinchilla, the Cal's dense coat allows them to enjoy time indoors and outdoors (including the snow). Although bred for show, the Californian loves to interact with its human family through play and cuddle time.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+              <div class="card">
+                <a href="#"><img src="Samoyed.jpg" style="height: 297px;" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <h5 class="card-title">Californian Rabbits</h5>
+                  <p class="card-text">A cross between a Himalayan and a Chinchilla, the Cal's dense coat allows them to enjoy time indoors and outdoors (including the snow). Although bred for show, the Californian loves to interact with its human family through play and cuddle time.</p>
+                  <center><a href="" class="btn btn-primary">Buy Now</a></center>
+                </div>
+              </div>
+          </div>
+          <!-- Footer -->
+<footer class="page-footer font-small bg-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+  
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <div class="iconsq" style="background-color: rgb(24, 24, 131);"><i class="fab fa-facebook-f" > </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <div class="iconsq" style="background-color: rgb(2, 83, 204);"><i class="fab fa-twitter"> </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <div class="iconsq" style="background-color: rgb(221, 10, 10);"><i class="fab fa-google-plus-g"> </i></div>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <div class="iconsq" style="background-color: rgb(6, 65, 228);"><i class="fab fa-linkedin-in"> </i></div>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+  
+    </div>
+    <!-- Footer Elements -->
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color: white;">© 2020 Copyright:
+      <a href="home.html" style="text-decoration: white; color: tomato;">OnilnePetShop</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+          
     </body>
-   
 </html>
