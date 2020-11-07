@@ -82,12 +82,24 @@
 
           }
 
+          function checkorder(){
+            var dogs = document.getElementById("dogbreed").value;
+            var birds = document.getElementById("birdbreed").value;
+            var rabbit = document.getElementById("rabbitbreed").value;
+
+            if(dogs=='Choose...'&&birds=='Choose...'&&rabbit=='Choose...'){
+              error+='\nPlease select an animal and its breed';
+              errorcode++;
+            }
+          }
+
           function validate(){
 
             emailCheck();
             nameCheck();
             cityState();
             checkZip();
+            checkorder();
             if(errorcode>0){
               alert(error);
             }
