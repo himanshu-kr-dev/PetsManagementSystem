@@ -93,6 +93,14 @@
             }
           }
 
+          function terms(){
+            var term = document.getElementById("terms").checked;
+            if(term==false){
+                error+='\nPlease accept the terms and conditions';
+                errorcode++;
+            }
+          }
+
           function validate(){
 
             emailCheck();
@@ -100,6 +108,7 @@
             cityState();
             checkZip();
             checkorder();
+            terms();
             if(errorcode>0){
               alert(error);
             }
@@ -290,7 +299,7 @@
               <center>
               <div class="form-group">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
+                  <input class="form-check-input" type="checkbox" id="terms">
                   <label class="form-check-label" for="invalidCheck">
                     Agree to terms and conditions
                   </label>
