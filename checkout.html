@@ -69,7 +69,7 @@
 
           function checkZip(){
             var zip = document.getElementById("zip").value;
-            var patt = /^\d{10}$/;
+            var patt = /^\d{6}$/;
             if(zip.length==0){
               error+='\nZip code not provided';
               errorcode++;
