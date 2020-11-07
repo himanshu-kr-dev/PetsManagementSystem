@@ -75,7 +75,7 @@
               errorcode++;
             }
 
-            if(!patt.test(zip)&&zip.length!=6){
+            if(!patt.test(zip)||zip.length!=6){
                 error+='\nZip code is invalid';
                 errorcode++;
             }
