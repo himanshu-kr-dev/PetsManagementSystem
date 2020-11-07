@@ -9,6 +9,94 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+        <script>
+            
+          var error=" ";
+          var errorcode=0;
+
+          function emailCheck(){
+              var email = document.getElementById("email").value;
+              var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+              if(email.length===0){
+                  error+='\nEmail id not provided';
+                  errorcode++;
+              }
+
+              if (reg.test(email) === false && email.length>0)
+              {
+                  error+='\nInvalid Email Address';
+                  errorcode++;
+              }
+          }
+
+          function nameCheck(){
+                  var fname = document.getElementById("fname").value;
+                  var lname = document.getElementById("lname").value;
+                  if(fname===lname && fname.length>0 && lname.length>0){
+                      error+='\nFirst name and last name same';
+                      errorcode++;
+                  }
+                  if(fname.length===0){
+                      error+='\nNo first name given';
+                      errorcode++;
+                  }
+                  if(lname.length===0){
+                      error+='\nNo Last name given';
+                      errorcode++;
+                  }
+          }
+
+          function cityState(){
+            var city = document.getElementById("city").value;
+            var state = document.getElementById("state").value;
+
+            if(city.length==0){
+              error+='\nCity name not provided';
+              errorcode++;
+            }
+
+            if(state.length==0){
+              error+='\nState name not provided';
+              errorcode++;
+            }
+
+            if(state==city&&city.length>0){
+              error+='\nState and city cannot be the same';
+              errorcode++;
+            }
+          }
+
+          function checkZip(){
+            var zip = document.getElementById("zip").value;
+            var patt = /^\d{10}$/;
+            if(zip.length==0){
+              error+='\nZip code not provided';
+              errorcode++;
+            }
+
+            if(!patt.test(zip)&&zip.length>0&&zip.length<7){
+                error+='\nZip code is invalid';
+                errorcode++;
+            }
+
+          }
+
+          function validate(){
+
+            emailCheck();
+            nameCheck();
+            cityState();
+            checkZip();
+            if(errorcode>0){
+              alert(error);
+            }
+            else{
+              alert("Submitted Successfuly");
+            }
+
+          }
+          </script>
         <style>
             .screen{
                 width: 100%;
@@ -70,26 +158,26 @@
              </div>
             <div class="form-group">
               <label for="exampleFormControlInput1">Email address</label>
-              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              <input type="email" class="form-control" id="email" placeholder="name@example.com">
             </div>
             <div class="form-row">
               <div class="col-md-6 mb-3">
                 <label for="validationCustom03">City</label>
-                <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
+                <input type="text" class="form-control" id="city" placeholder="City" >
                 <div class="invalid-feedback">
                   Please provide a valid city.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom04">State</label>
-                <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                <input type="text" class="form-control" id="state" placeholder="State" >
                 <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom05">Zip</label>
-                <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                <input type="text" class="form-control" id="zip" placeholder="Zip" >
                 <div class="invalid-feedback">
                   Please provide a valid zip.
                 </div>
@@ -190,7 +278,7 @@
               <center>
               <div class="form-group">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck">
                   <label class="form-check-label" for="invalidCheck">
                     Agree to terms and conditions
                   </label>
@@ -199,31 +287,9 @@
                   </div>
                 </div>
               </div>
-            <button type="submit" class="btn btn-outline-dark btn-lg mb-2" onclick="order()">Order Now</button></center>
+            <button type="submit" class="btn btn-outline-dark btn-lg mb-2" onclick="validate()">Order Now</button></center>
           </form>
-          <script>
-            function order(){
-              alert("We'll reach out to you shortly :)");
-            }
-            // Example starter JavaScript for disabling form submissions if there are invalid fields
-            (function() {
-              'use strict';
-              window.addEventListener('load', function() {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function(form) {
-                  form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                      event.preventDefault();
-                      event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                  }, false);
-                });
-              }, false);
-            })();
-            </script>
+         
           <!-- Footer -->
 <footer class="page-footer font-small bg-dark pt-4">
 
